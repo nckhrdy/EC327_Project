@@ -62,6 +62,7 @@ void checkChoice(char choiceInput)
         cout<<"enter a valid input"<<endl;
     }
 }
+
 void ReadPasswords()
 {
     cout<<"READ PASS"<<endl;
@@ -78,24 +79,38 @@ void ReadPasswords()
 
       else cout << "Unable to open file";
 }
+
 void WritePassword()
 {
-    cout<<"WRITE PASS"<<endl;
-    ofstream myfile ("passwords.txt");
-    if (myfile.is_open())
+    cout<<"\tWRITE PASS"<<endl;
+    cin>>NewPassword;
+    ofstream fout;
+    ifstream fin;
+    fin.open("passwords.txt");
+    fout.open("passwords.txt", ios::app);
+    if (fin.is_open())
     {
-        cout<<"\n\tNew Password: ";
-        cin>>NewPassword;
-        myfile << NewPassword;
-        
-        myfile.close();
+        fout<<"\n"<<NewPassword;
     }
-    else cout << "Unable to open file";
+    cout<<"Data has been added to the file"<<endl;
+    fin.close();
+    fout.close();
+    
+//    ofstream myfile ("passwords.txt");
+//    if (myfile.is_open())
+//    {
+//        cout<<"\n\tNew Password: ";
+//        cin>>NewPassword;
+//        myfile << NewPassword;
+//
+//        myfile.close();
+//    }
     
 }
+
 void ReadBirthdays()
 {
-    cout<<"READ BIRTDAYS"<<endl;
+    cout<<"READ BIRTDAYS\n\t"<<endl;
     string line;
       ifstream myfile ("birthdays.txt");
       if (myfile.is_open())
@@ -109,23 +124,27 @@ void ReadBirthdays()
 
       else cout << "Unable to open file";
 }
+
 void WriteBirthday()
 {
-    cout<<"WRITE BIRTHDAY"<<endl;
-    ofstream myfile ("birthdays.txt");
-    if (myfile.is_open())
+    cout<<"\tWRITE Birthday\n\t"<<endl;
+    cin>>NewBirthday;
+    ofstream fout;
+    ifstream fin;
+    fin.open("birthdays.txt");
+    fout.open("birthdays.txt", ios::app);
+    if (fin.is_open())
     {
-        cout<<"\n\tNew Birthday: ";
-        cin>>NewBirthday;
-        myfile << NewBirthday;
-        
-        myfile.close();
+        fout<<"\n"<<NewBirthday;
     }
-    else cout << "Unable to open file";
+    cout<<"Data has been added to the file"<<endl;
+    fin.close();
+    fout.close();
 }
+
 void ReadRecepies()
 {
-    cout<<"READ RECEPIE"<<endl;
+    cout<<"READ RECEPIE\n\t"<<endl;
     string line;
       ifstream myfile ("recepies.txt");
       if (myfile.is_open())
@@ -139,20 +158,24 @@ void ReadRecepies()
 
       else cout << "Unable to open file";
 }
+
 void WriteRecepie()
 {
-    cout<<"WRITE RECEPIE"<<endl;
-    ofstream myfile ("recepies.txt");
-    if (myfile.is_open())
+    cout<<"\tWRITE Recepie\n\t"<<endl;
+    cin>>NewRecepie;
+    ofstream fout;
+    ifstream fin;
+    fin.open("recepies.txt");
+    fout.open("recepies.txt", ios::app);
+    if (fin.is_open())
     {
-        cout<<"\n\tNew Recepie: ";
-        cin>>NewRecepie;
-        myfile << NewRecepie;
-        
-        myfile.close();
+        fout<<"\n"<<NewRecepie;
     }
-    else cout << "Unable to open file";
+    cout<<"Data has been added to the file"<<endl;
+    fin.close();
+    fout.close();
 }
+
 int main()
 {
     cout<<"\n\tEnter User Password: ";

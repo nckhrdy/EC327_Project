@@ -17,7 +17,7 @@ using namespace std;
 #endif /* RazKey_hpp */
 
 string password = "rabbit";
-string userLogin, NewPassword, NewBirthday, NewRecepie;
+string userLogin,NewPassword, NewBirthday, NewRecepie;
 bool passwordCheck = false;
 char choiceInput, ReadOrWrite;
 
