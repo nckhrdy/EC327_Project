@@ -15,5 +15,21 @@ class Razkey
         
         System.out.println("\n\n\tSelect a folder\n\t  PASSWORDS\n\t  BIRTHDAYS\n\t  RECIPIES");
     }
-
+    
+    public boolean checkLogin(String userLogin, String password)
+    {
+        if (userLogin == password)
+        {
+            System.out.printl("\t****Welcome Back****");
+            return(true);
+        }
+        else
+        {
+            System.out.printl("\n\tWrong Password");
+            return(false);
+        }
+    }
+    
+    
 }
+
