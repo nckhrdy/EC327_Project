@@ -4,65 +4,86 @@
 //
 //  Created by Nick Hardy on 12/2/21.
 //
+//  Updated by Kaede Kawata on 12/6/21.
 
 #include "RazKey.hpp"
 using namespace std;
 
-bool checkLogin(string userLogin)
+bool RazKey::checkLogin(string userLogin)
 {
-        if (userLogin == password)
-        {
-            cout<<"\t****welcome back****"<<endl;
-            return true;
-        }
-        else
-        {
-            cout<<"\n\tWrong password"<<endl;
-            return false;
-        }
+    if (userLogin == password)
+    {
+        cout<<"\t****welcome back****"<<endl;
+        return true;
+    }
+    else
+    {
+        cout<<"\n\tWrong password"<<endl;
+        return false;
+    }
 }
 
-void checkChoice(char choiceInput)
+bool RazKey::checkChoice(char choiceInput)
 {
     if (choiceInput == 'p')
     {
         cout<<"Read or Write? ";
         cin>>ReadOrWrite;
-        if (ReadOrWrite == 'r')
+        if (ReadOrWrite == 'r'){
             ReadPasswords();
-        else if(ReadOrWrite == 'w')
+            return true;
+        }
+        else if(ReadOrWrite == 'w'){
             WritePassword();
-        else
+            return true;
+        }
+        else{
             cout<<"enter a valid input"<<endl;
+            return false;
+        }
     }
     else if(choiceInput == 'b')
     {
         cout<<"Read or Write? ";
         cin>>ReadOrWrite;
-        if (ReadOrWrite == 'r')
+        if (ReadOrWrite == 'r'){
             ReadBirthdays();
-        else if(ReadOrWrite == 'w')
+            return true;
+        }
+        else if(ReadOrWrite == 'w'){
             WriteBirthday();
-        else
+            return true;
+        }
+        else{
             cout<<"enter a valid input"<<endl;
+            return false;
+        }
     }
     else if(choiceInput == 'r')
     {
         cout<<"Read or Write? ";
         cin>>ReadOrWrite;
-        if (ReadOrWrite == 'r')
+        if (ReadOrWrite == 'r'){
             ReadRecepies();
-        else if(ReadOrWrite == 'w')
+            return true;
+        }
+        else if(ReadOrWrite == 'w'){
             WriteRecepie();
-        else
+            return true;
+        }
+        else{
             cout<<"enter a valid input"<<endl;
+            return false;
+        }
     }
     else
     {
         cout<<"enter a valid input"<<endl;
+        return false;
     }
 }
 
+/*
 void ReadPasswords()
 {
     cout<<"READ PASS"<<endl;
@@ -76,10 +97,8 @@ void ReadPasswords()
         }
         myfile.close();
       }
-
       else cout << "Unable to open file";
 }
-
 void WritePassword()
 {
     cout<<"\tWRITE PASS"<<endl;
@@ -95,7 +114,7 @@ void WritePassword()
     cout<<"Data has been added to the file"<<endl;
     fin.close();
     fout.close();
-    
+
 //    ofstream myfile ("passwords.txt");
 //    if (myfile.is_open())
 //    {
@@ -105,9 +124,8 @@ void WritePassword()
 //
 //        myfile.close();
 //    }
-    
-}
 
+}
 void ReadBirthdays()
 {
     cout<<"READ BIRTDAYS\n\t"<<endl;
@@ -121,10 +139,8 @@ void ReadBirthdays()
         }
         myfile.close();
       }
-
       else cout << "Unable to open file";
 }
-
 void WriteBirthday()
 {
     cout<<"\tWRITE Birthday\n\t"<<endl;
@@ -141,7 +157,6 @@ void WriteBirthday()
     fin.close();
     fout.close();
 }
-
 void ReadRecepies()
 {
     cout<<"READ RECEPIE\n\t"<<endl;
@@ -155,10 +170,8 @@ void ReadRecepies()
         }
         myfile.close();
       }
-
       else cout << "Unable to open file";
 }
-
 void WriteRecepie()
 {
     cout<<"\tWRITE Recepie\n\t"<<endl;
@@ -175,12 +188,11 @@ void WriteRecepie()
     fin.close();
     fout.close();
 }
-
 int main()
 {
     cout<<"\n\tEnter User Password: ";
     cin>>userLogin;
-    
+
     while (!checkLogin(userLogin))
     {
         cout<<"\n\tEnter User Password: ";
@@ -191,4 +203,11 @@ int main()
 //    cout<<choiceInput<<endl;
     checkChoice(choiceInput);
     return 0;
+}
+*/
+
+string RazKey::Read(string line){
+}
+
+void RazKey::Write(istream& infile, string in){
 }
