@@ -30,7 +30,7 @@ public:
   // string ReadRecepies();
   // void WriteRecepie(string);
   string Read(istream&);
-  void Write(istream&);
+  void Write(istream&, string);
 
 }
 #endif /* RazKey_hpp */
