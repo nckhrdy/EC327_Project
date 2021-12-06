@@ -4,11 +4,12 @@
 //
 //  Created by Nick Hardy on 12/2/21.
 //
+//  Updated by Kaede Kawata on 12/6/21.
 
 #include "RazKey.hpp"
 using namespace std;
 
-bool checkLogin(string userLogin)
+bool RazKey::checkLogin(string userLogin)
 {
         if (userLogin == password)
         {
@@ -22,47 +23,67 @@ bool checkLogin(string userLogin)
         }
 }
 
-void checkChoice(char choiceInput)
+bool RazKey::checkChoice(char choiceInput)
 {
     if (choiceInput == 'p')
     {
         cout<<"Read or Write? ";
         cin>>ReadOrWrite;
-        if (ReadOrWrite == 'r')
+        if (ReadOrWrite == 'r'){
             ReadPasswords();
-        else if(ReadOrWrite == 'w')
+            return true;
+        }
+        else if(ReadOrWrite == 'w'){
             WritePassword();
-        else
+            return true;
+        }
+        else{
             cout<<"enter a valid input"<<endl;
+            return false;
+        }
     }
     else if(choiceInput == 'b')
     {
         cout<<"Read or Write? ";
         cin>>ReadOrWrite;
-        if (ReadOrWrite == 'r')
+        if (ReadOrWrite == 'r'){
             ReadBirthdays();
-        else if(ReadOrWrite == 'w')
+            return true;
+        }
+        else if(ReadOrWrite == 'w'){
             WriteBirthday();
-        else
+            return true;
+        }
+        else{
             cout<<"enter a valid input"<<endl;
+            return false;
+        }
     }
     else if(choiceInput == 'r')
     {
         cout<<"Read or Write? ";
         cin>>ReadOrWrite;
-        if (ReadOrWrite == 'r')
+        if (ReadOrWrite == 'r'){
             ReadRecepies();
-        else if(ReadOrWrite == 'w')
+            return true;
+        }
+        else if(ReadOrWrite == 'w'){
             WriteRecepie();
-        else
+            return true;
+        }
+        else{
             cout<<"enter a valid input"<<endl;
+            return false;
+        }
     }
     else
     {
         cout<<"enter a valid input"<<endl;
+        return false;
     }
 }
 
+/*
 void ReadPasswords()
 {
     cout<<"READ PASS"<<endl;
@@ -191,4 +212,11 @@ int main()
 //    cout<<choiceInput<<endl;
     checkChoice(choiceInput);
     return 0;
+}
+*/
+
+string RazKey::Read(string line){
+}
+
+void RazKey::Write(istream& infile, string in){
 }
