@@ -40,36 +40,31 @@ public class RazKey
         }
     }
 
-    public boolean checkChoice(char choiceInput, char RorWInput){
+    public void checkChoice(char choiceInput, char RorWInput){
         if (choiceInput == 'p'){
             if (RorWInput == 'r'){
-                return true;
+                read('passwords.txt');
             }
             else if (RorWInput == 'w'){
-                return true;
+                write('passwords.txt, );
             }
-            else return false;
         }
         else if (choiceInput == 'b'){
             if (RorWInput == 'r'){
-                return true;
+                read('birthdays.txt');
             }
             else if (RorWInput == 'w'){
-                return true;
+                write('birthdays.txt', );
             }
-            else return false;
         }
         else if (choiceInput == 's'){
             if (RorWInput == 'r'){
-                return true;
+                read('recepies.txt');
             }
             else if (RorWInput == 'w'){
-                return true;
+                write('recepies.txt', );
             }
-            else return false;
         }
-        else return false;
-
     }
 
     StringBuffer read(String filename){
@@ -93,7 +88,7 @@ public class RazKey
         return sb;
     }
 
-    void write(String filename, String newInput){
+    void writeVarArgs(String...filename){
         try{
             FileWriter writer = new FileWriter(filename, true);
             writer.write("\n");
