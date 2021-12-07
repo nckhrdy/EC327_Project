@@ -48,6 +48,7 @@ public class RazKey
             else if (RorWInput == 'w'){
                 write('passwords.txt);
             }
+            else return 0; 
         }
         else if (choiceInput == 'b'){
             if (RorWInput == 'r'){
@@ -56,6 +57,7 @@ public class RazKey
             else if (RorWInput == 'w'){
                 write('birthdays.txt');
             }
+            else return 0;
         }
         else if (choiceInput == 's'){
             if (RorWInput == 'r'){
@@ -64,7 +66,9 @@ public class RazKey
             else if (RorWInput == 'w'){
                 write('recepies.txt');
             }
+            else return 0;
         }
+        else return 0;
     }
 
     StringBuffer read(String filename){
