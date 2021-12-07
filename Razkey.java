@@ -46,7 +46,7 @@ public class RazKey
                 read('passwords.txt');
             }
             else if (RorWInput == 'w'){
-                write('passwords.txt, );
+                write('passwords.txt);
             }
         }
         else if (choiceInput == 'b'){
@@ -54,7 +54,7 @@ public class RazKey
                 read('birthdays.txt');
             }
             else if (RorWInput == 'w'){
-                write('birthdays.txt', );
+                write('birthdays.txt');
             }
         }
         else if (choiceInput == 's'){
@@ -62,7 +62,7 @@ public class RazKey
                 read('recepies.txt');
             }
             else if (RorWInput == 'w'){
-                write('recepies.txt', );
+                write('recepies.txt');
             }
         }
     }
