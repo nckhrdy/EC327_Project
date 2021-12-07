@@ -21,7 +21,8 @@ public class RazKey
     }
     */
     
-
+    public String NewInput; 
+    //public string for the NewInput
     private String password;
     //private String filename;
 
@@ -51,44 +52,43 @@ public class RazKey
         else return 0;
     } 
    
-    public void checkWrite(char RorWInput, String filename) {
-       
-        if (RorWInput == 'w') { writeVarArgs(filename) }
-        
-        else 
-            return 0;
-    }
-    
-    StringBuffer read(String filename){
+ 
+    StringBuffer read(String filename, char RarWInput){
         StringBuffer sb = new StringBuffer();
         try{
-            File file = new File(filename);
-            FileReader fr = new FileReader(file);
-            BufferedReader br = new BufferedReader(fr);
-            String line;
-            while ((line = br.readLine()) != null){
-                sb.append(line);
-                sb.append("\n");
+             if (RorWInput == 'w') //checking if the user wants to write to file
+            {
+                 //use string buffer to append to the end of the file
             }
-            fr.close();
-        }
+            else { //read through the fil
+                File file = new File(filename);
+                FileReader fr = new FileReader(file);
+                BufferedReader br = new BufferedReader(fr);
+                String line;
+                while ((line = br.readLine()) != null){
+                    sb.append(line);
+                    sb.append("\n");
+                 }
+                fr.close();
+             }
 
-        catch(IOException e){
-            e.printStackTrace();
+                catch(IOException e){
+                e.printStackTrace();
+            }
         }
 
         return sb;
     }
 
-    void writeVarArgs(String...filename){
-        try{
-            FileWriter writer = new FileWriter(filename, true);
-            writer.write("\n");
-            writer.write(newInput);
-            writer.close();
-        }
-        catch (IOException e){
-            e.printStackTrace();
-        }
-    }
+//    void write(String filename, String newInput){
+//         try{
+//             FileWriter writer = new FileWriter(filename, true);
+//             writer.write("\n");
+//             writer.write(newInput);
+//             writer.close();
+//         }
+//         catch (IOException e){
+//             e.printStackTrace();
+//         }
+//     }
 }
