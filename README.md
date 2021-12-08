@@ -15,7 +15,7 @@ Razkey
 ## How to Run: 
   Backend:
   
-  Download RazKey.java, command.sh, and main.java. Give command.sh a permission to excute shell command from the file (More instruction below). Run main.java 
+  Download RazKey.java, command.sh, and test.java. Give command.sh a permission to excute shell command from the file (More instruction below). Run test.java 
   
   Front end: 
   
