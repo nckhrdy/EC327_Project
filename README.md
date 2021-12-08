@@ -1,13 +1,29 @@
 # EC327_Project
 
-Team Name: Razkey
+## Team Name: Razkey
 
-Team Members: Nicholas Hardy (nckhrdy@bu.edu), Kaede Kawata (kkawata@bu.edu), Yen Vo (vnicky@bu.edu), James Sullivan (jamesjs@bu.edu)
+## Team Members: 
+  Nicholas Hardy (nckhrdy@bu.edu)
+  Kaede Kawata (kkawata@bu.edu)
+  Yen Vo (vnicky@bu.edu)
+  James Sullivan (jamesjs@bu.edu)
 
-Project Overview: Our project is a secure passwords and sensitive information Android App that allows user to store and retrieve information.
+## Project Overview: 
+  Our project is a secure passwords and sensitive information Android App that allows user to store and retrieve information.
 
-How to Run: 
+## How to Run: 
 
-Build Overview: The project was split into two main aspects. The front end app design and code using  Android Studio, and the back end raspberry pi component. The Raspberry Pi functions as our back end program and is written in Java. The primary focus for us was to create a fully functional and robust backend program that stores and passes information safely upon request. 
+## Build Overview: 
+  The project was split into two main aspects. The front end app design and code using  Android Studio, and the back end raspberry pi component. The Raspberry Pi functions as our back end program and is written in Java. The primary focus for us was to create a fully functional and robust backend program that stores and passes information safely upon request. 
 
-Youtube Video Link:
+## Youtube Video Link:
+
+## Set up Raspberry Pi
+  In this project, we used Raspberry Pi 3 Model B+. To start, we first installed the operating system, Raspbian, via the the Raspberry Pi Imager from [the following link](https://www.raspberrypi.com/software/) into SD card. And then, we inserted the SD card to the Raspberry Pi. To display the desktop of Raspbian, we connected the monitor in PHO 307 with the Raspberry Pi using HDMI cable. Also, in order to control the display with mouse and keyboard, connect the mouse and keyboard to a USB port on the Raspberry Pi.
+
+  Because we wanted to access to the files on the Raspberry Pi via ssh, we needed to enable SSH on Raspberry Pi. To do so, we followed the following steps.
+1. Click the raspberry logo at left top of the display.
+2. Choose **Preference** and Click on **Raspberry Pi Configuration**.
+3. Click on **Interfaces** tab and look for **SSH** in the second line.
+4. Enable **SSH** and click **Ok**.
+
