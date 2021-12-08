@@ -13,9 +13,16 @@ Razkey
   Our project is a secure passwords and sensitive information Android App that allows user to store and retrieve information on Raspberry Pi.
 
 ## How to Run: 
-  Backend: download RazKey.java, command.sh, and main.java. Give command.sh a permission to excute shell command from the file (More instruction below). Run main.java 
+  Backend:
   
-  Frondend: 
+  Download RazKey.java, command.sh, and main.java. Give command.sh a permission to excute shell command from the file (More instruction below). Run main.java 
+  
+  Front end: 
+  
+  First, download Android Studio. Then create a new project and set preffered code to Java. Once the project is set up, copy our final_activity_main.xml file into the initial activity_main.xml file given within Android Studio. Subsequently, copy our FinalMainActivity.java file into the initial MainActivity.java tab that is given.
+  Next, right click on the 'app' folder in the upper left of Android Studio and select 'New' -> 'Activity' -> 'empty activity.' 
+  From there copy our final_activity_2.xml and finalactivity2.java files into the corresponding tabs given by Android Studio.
+  Once finished, click the green run button at the top of Android Studio and enjoy the android emulator.
 
 ## Build Overview: 
   The project was split into two main aspects. The front end app design and code using  Android Studio, and the back end raspberry pi component. The Raspberry Pi functions as our back end program and is written in Java. The primary focus for us was to create a fully functional and robust backend program that stores and passes information safely upon request. 
