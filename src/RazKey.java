@@ -117,7 +117,7 @@ public class RazKey
         }
     }
 
-    void connectSSH() throws InterruptedException{
+    public void connectSSH() throws InterruptedException{
         String dir = System.getProperty("user.dir");
         String abspath = dir + File.separator + "command.sh";
         ProcessBuilder pb = new ProcessBuilder(abspath);
