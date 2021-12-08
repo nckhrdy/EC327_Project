@@ -21,9 +21,17 @@
 ## Set up Raspberry Pi
   In this project, we used Raspberry Pi 3 Model B+. To start, we first installed the operating system, Raspbian, via the the Raspberry Pi Imager from [the following link](https://www.raspberrypi.com/software/) into SD card. And then, we inserted the SD card to the Raspberry Pi. To display the desktop of Raspbian, we connected the monitor in PHO 307 with the Raspberry Pi using HDMI cable. Also, in order to control the display with mouse and keyboard, connect the mouse and keyboard to a USB port on the Raspberry Pi.
 
-  Because we wanted to access to the files on the Raspberry Pi via ssh, we needed to enable SSH on Raspberry Pi. To do so, we followed the following steps.
+  Because we wanted to access to the files on the Raspberry Pi from other divices via ssh, we needed to enable SSH on Raspberry Pi. To do so, we followed the following steps.
 1. Click the raspberry logo at left top of the display.
 2. Choose **Preference** and Click on **Raspberry Pi Configuration**.
 3. Click on **Interfaces** tab and look for **SSH** in the second line.
 4. Enable **SSH** and click **Ok**.
 
+  Also, make sure that the divice and the Raspberry Pi is connected to the same WiFi.
+
+## Give Permission to .sh File
+  Because we wanted to excute shell command from .java file, we needed to give a permission to .sh file to excute command from the file. In order to do so, open Terminal (for Mac) or Cygwin (for Windows) and type the following command
+  ```
+  chmod u+r+x command.sh
+  ```
+In Terminal or Cygwin, make sure you are in the same directly as the .sh file is in. 
