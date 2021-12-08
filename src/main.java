@@ -1,6 +1,5 @@
+package src;
 import java.util.Scanner;
-
-import src.RazKey;
 
 public class main {
     public static void main(String[] arg){
