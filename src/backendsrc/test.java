@@ -14,14 +14,14 @@ public class test {
         RazKey rk = new RazKey(createPass); 
         // create the new object of RazKey
         // object name (rk) is going to be the user name
-    
+        /*
         try {
             rk.connectSSH();
         } 
         catch (InterruptedException e) {
             e.printStackTrace();
         }
-    
+        */
 
         // String pass;
         /*
@@ -60,7 +60,6 @@ public class test {
         if (newInput.equals("no") || newInput.equals("No")){
             newInput = "";
         }
-        System.out.println(newInput);
         boolean can2 = false;
         while(!can2){
             if (rk.checkChoice(file.charAt(0), newInput)){
@@ -85,6 +84,7 @@ public class test {
             rorw = input.next();
             // ask for user input
         }
+
         if (!rk.checkChoice(file.charAt(0), rorw.charAt(0))){
             System.out.println("\n Wrong Choices ...");
             System.exit(0);
