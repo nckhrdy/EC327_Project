@@ -1,5 +1,7 @@
-package src;
+package misc;
 import java.io.File;
+
+import src.RazKey;
 
 public class CheckPoint {
     public static void main(String[] arg){
