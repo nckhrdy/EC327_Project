@@ -1,5 +1,6 @@
-//import java.util.Scanner;
+package src;
 import java.io.*;
+import java.util.Scanner;
 
 public class RazKey
 {
@@ -43,35 +44,48 @@ public class RazKey
     public boolean checkChoice(char choiceInput, char RorWInput){
         if (choiceInput == 'p'){
             if (RorWInput == 'r'){
+                read("passwords.txt");
                 return true;
             }
             else if (RorWInput == 'w'){
+                try (Scanner input = new Scanner(System.in)) {
+                    System.out.print("\n\tEnter New Password: ");
+                    String newInput = input.next();
+                    write("passwords.txt", newInput);   
+                }
                 return true;
             }
-            else return false;
         }
         else if (choiceInput == 'b'){
             if (RorWInput == 'r'){
+                read("birthdays.txt");
                 return true;
             }
             else if (RorWInput == 'w'){
+                try (Scanner input = new Scanner(System.in)) {
+                    System.out.print("\n\tEnter New Password: ");
+                    String newInput = input.next();
+                    write("birthdays.txt", newInput);
+                }
                 return true;
             }
-            else return false;
         }
         else if (choiceInput == 's'){
             if (RorWInput == 'r'){
+                read("recepies.txt");
                 return true;
             }
             else if (RorWInput == 'w'){
+                try (Scanner input = new Scanner(System.in)) {
+                    System.out.print("\n\tEnter New Password: ");
+                    String newInput = input.next();
+                    write("recepies.txt", newInput);
+                }
                 return true;
             }
-            else return false;
         }
-        else return false;
-
+        return false;
     }
-
     StringBuffer read(String filename){
         StringBuffer sb = new StringBuffer();
         try{
@@ -85,11 +99,9 @@ public class RazKey
             }
             fr.close();
         }
-
         catch(IOException e){
             e.printStackTrace();
         }
-
         return sb;
     }
 
