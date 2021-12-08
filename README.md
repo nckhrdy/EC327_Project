@@ -1,6 +1,7 @@
 # EC327_Project
 
-## Team Name: Razkey
+## Team Name: 
+Razkey
 
 ## Team Members: 
   Nicholas Hardy (nckhrdy@bu.edu)
@@ -9,7 +10,7 @@
   James Sullivan (jamesjs@bu.edu)
 
 ## Project Overview: 
-  Our project is a secure passwords and sensitive information Android App that allows user to store and retrieve information.
+  Our project is a secure passwords and sensitive information Android App that allows user to store and retrieve information on Raspberry Pi.
 
 ## How to Run: 
 
