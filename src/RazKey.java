@@ -1,6 +1,6 @@
 package src;
 import java.io.*;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class RazKey
 {
@@ -31,62 +31,40 @@ public class RazKey
     }
 
     public boolean checkLogin(String pswInput){
-        if (pswInput == password){
+        System.out.println("	**** check1 ****");
+        if (pswInput.equals(password)){
             System.out.println("	**** Welcome Back ****");
             return true;
         }
         else {
-            System.out.println("    Wrong password");
+            System.out.println("	**** check2 ****");
+            //System.out.println("    Wrong password");
             return false;
         }
     }
 
-    public boolean checkChoice(char choiceInput, char RorWInput){
+    public boolean checkChoice(char choiceInput, String newInput){
+        String dir = System.getProperty("user.dir");
+        String abspath = dir + File.separator + "src" + File.separator;
         if (choiceInput == 'p'){
-            if (RorWInput == 'r'){
-                read("passwords.txt");
-                return true;
-            }
-            else if (RorWInput == 'w'){
-                try (Scanner input = new Scanner(System.in)) {
-                    System.out.print("\n\tEnter New Password: ");
-                    String newInput = input.next();
-                    write("passwords.txt", newInput);   
-                }
-                return true;
-            }
+            abspath = abspath + "passwords.txt";
+            read(abspath, newInput);
+            return true;
         }
         else if (choiceInput == 'b'){
-            if (RorWInput == 'r'){
-                read("birthdays.txt");
-                return true;
-            }
-            else if (RorWInput == 'w'){
-                try (Scanner input = new Scanner(System.in)) {
-                    System.out.print("\n\tEnter New Password: ");
-                    String newInput = input.next();
-                    write("birthdays.txt", newInput);
-                }
-                return true;
-            }
+            abspath = abspath + "birthdays.txt";
+            read(abspath, newInput);
+            return true;
         }
         else if (choiceInput == 's'){
-            if (RorWInput == 'r'){
-                read("recepies.txt");
-                return true;
-            }
-            else if (RorWInput == 'w'){
-                try (Scanner input = new Scanner(System.in)) {
-                    System.out.print("\n\tEnter New Password: ");
-                    String newInput = input.next();
-                    write("recepies.txt", newInput);
-                }
-                return true;
-            }
+            abspath = abspath + "recepies.txt";
+            read(abspath, newInput);
+            return true;
         }
         return false;
     }
-    StringBuffer read(String filename){
+
+    public StringBuffer read(String filename, String newInput){
         StringBuffer sb = new StringBuffer();
         try{
             File file = new File(filename);
@@ -97,6 +75,9 @@ public class RazKey
                 sb.append(line);
                 sb.append("\n");
             }
+            sb.append(newInput);
+            sb.append("\n");
+            write(filename, newInput);
             fr.close();
         }
         catch(IOException e){
@@ -105,7 +86,7 @@ public class RazKey
         return sb;
     }
 
-    void write(String filename, String newInput){
+    public void write(String filename, String newInput){
         try{
             FileWriter writer = new FileWriter(filename, true);
             writer.write("\n");
