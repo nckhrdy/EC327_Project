@@ -19,7 +19,7 @@ Razkey
   
   Front end: 
   
-  First, download Android Studio. Then create a new project and set preffered code to Java. Once the project is set up, copy our final_activity_main.xml file into the initial activity_main.xml tab given within Android Studio. Subsequently, copy our FinalMainActivity.java file into the initial MainActivity.java tab that is also given by Android Studio.
+  First, download Android Studio. Then create a new project and set preferred code to Java. Once the project is set up, copy our final_activity_main.xml file into the initial activity_main.xml tab given within Android Studio. Subsequently, copy our FinalMainActivity.java file into the initial MainActivity.java tab that is also given by Android Studio.
   Next, right click on the 'app' folder in the upper left of Android Studio and select 'New' -> 'Activity' -> 'Empty Activity.' Name the new activity 'activity2'.
   From there copy our final_activity_2.xml and finalactivity2.java files into the corresponding tabs given by Android Studio.
   Once finished, click the green run button at the top of Android Studio and enjoy the android emulator.
