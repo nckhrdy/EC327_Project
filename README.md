@@ -1,4 +1,4 @@
-# EC327_Project
+# EC327_Project - Raspberry Pi Lockbox
 
 ## Team Name: 
 Razkey
